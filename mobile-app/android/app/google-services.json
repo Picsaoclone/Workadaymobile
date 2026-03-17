@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "83665320799",
+    "project_id": "workaday-mobile",
+    "storage_bucket": "workaday-mobile.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:83665320799:android:46f85e9832d462e17c54ea",
+        "android_client_info": {
+          "package_name": "com.puda.workadaymobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDL9JQmdxvcJ7D6OwqDqcETbfQkgKiKKEU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

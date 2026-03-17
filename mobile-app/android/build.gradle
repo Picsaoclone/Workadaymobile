@@ -1,0 +1,49 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+  // Toolchain pinned for consistent local/EAS builds.
+  // Keep these aligned with React Native's `node_modules/react-native/gradle/libs.versions.toml`.
+  ext {
+    agpVersion = "8.11.0"
+    kotlinVersion = "2.1.20"
+  }
+
+  repositories {
+    google()
+    mavenCentral()
+    maven { url("$rootDir/../node_modules/@notifee/react-native/android/libs") }
+  }
+  dependencies {
+    classpath("com.android.tools.build:gradle:${agpVersion}")
+    classpath('com.facebook.react:react-native-gradle-plugin')
+    classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}")
+    classpath('com.google.gms:google-services:4.4.2')
+  }
+}
+
+allprojects {
+  repositories {
+    google()
+    mavenCentral()
+    maven { url("$rootDir/../node_modules/@notifee/react-native/android/libs") }
+    maven { url 'https://www.jitpack.io' }
+  }
+
+  // Some native modules declare their own buildscript AGP/Kotlin versions.
+  // Force a single toolchain version across the build to avoid variant resolution failures.
+  buildscript {
+    configurations.classpath {
+      resolutionStrategy.eachDependency { details ->
+        if (details.requested.group == 'com.android.tools.build' && details.requested.name == 'gradle') {
+          details.useVersion agpVersion
+        }
+        if (details.requested.group == 'org.jetbrains.kotlin' && details.requested.name == 'kotlin-gradle-plugin') {
+          details.useVersion kotlinVersion
+        }
+      }
+    }
+  }
+}
+
+apply plugin: "expo-root-project"
+apply plugin: "com.facebook.react.rootproject"

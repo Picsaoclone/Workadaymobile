@@ -1,0 +1,50 @@
+# EAS Build upload exclusions (keep archive < 2GB)
+# Docs: https://docs.expo.dev/build-reference/easignore/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Expo
+.expo/
+.expo-shared/
+
+# Git
+.git/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Tests / coverage
+coverage/
+
+# Build outputs
+build/
+dist/
+
+# Android build caches/artifacts (can be huge)
+android/.gradle/
+android/.idea/
+android/.cxx/
+android/build/
+android/app/.cxx/
+android/app/build/
+android/app/.gradle/
+
+# Large archives
+**/*.zip
+**/*.tar
+**/*.tar.gz
+**/*.tgz
+**/*.7z
+
+# Logs
+**/*.log
+android/local.properties

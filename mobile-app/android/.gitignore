@@ -1,0 +1,20 @@
+# OSX
+#
+.DS_Store
+
+# Android/IntelliJ
+#
+build/
+.idea
+.gradle
+local.properties
+*.iml
+*.hprof
+.cxx/
+
+# Local-only files
+app/debug.keystore
+build_status.txt
+
+# Bundle artifacts
+*.jsbundle

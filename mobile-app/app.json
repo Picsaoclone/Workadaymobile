@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "name": "Workaday Mobile",
+    "scheme": "workadaymobile",
+    "slug": "workaday-mobile",
+    "icon": "./assets/icon.png",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Workaday cần truy cập camera để bạn thực hiện cuộc gọi video.",
+        "NSMicrophoneUsageDescription": "Workaday cần truy cập micro để bạn thực hiện cuộc gọi thoại/video.",
+        "NSPhotoLibraryUsageDescription": "Workaday cần truy cập thư viện ảnh để bạn gửi ảnh trong phần Giao tiếp.",
+        "NSPhotoLibraryAddUsageDescription": "Workaday cần quyền lưu ảnh khi bạn tải/luu nội dung từ cuộc trò chuyện."
+      }
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "icon": "./assets/icon.png",
+      "package": "com.puda.workadaymobile",
+      "googleServicesFile": "./google-services.json",
+      "softwareKeyboardLayoutMode": "resize"
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-asset",
+      "expo-notifications",
+      "expo-font",
+      "@react-native-community/datetimepicker"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "af2a0502-8cae-46b0-9638-df78275af96c"
+      }
+    },
+    "owner": "puda"
+  }
+}
